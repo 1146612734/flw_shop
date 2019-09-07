@@ -7,7 +7,12 @@ var app = getApp();
 Page({
   data: {
     id: 0,
-    brand: {},
+    brand: {
+      pic_img: 'https://img.zuoyebang.cc/zyb_72b69ab796f577462ea32b300c2b0666.jpg',
+      pic_title: '笑语嫣然',
+      price: 139
+    },
+    standardHide: true,
     goodsList: [],
     page: 1,
     size: 1000
@@ -43,6 +48,25 @@ Page({
           });
         }
       });
+  },
+  onShareAppMessage: function () {
+    let users = wx.getStorageSync('user');
+    if (res.from === 'button') { }
+    return {
+      title: '转发',
+      path: '/pages/index/index',
+      success: function (res) { }
+    }
+  },
+  standardShow: function () {
+    this.setData({
+      standardHide: false
+    });
+  },
+  standardHide: function () {
+    this.setData({
+      standardHide: true
+    });
   },
   onReady: function () {
     // 页面渲染完成

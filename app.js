@@ -7,7 +7,6 @@ App({
       console.log(e);
     }
   },
-
   globalData: {
     userInfo: {
       nickname: '点击登录',

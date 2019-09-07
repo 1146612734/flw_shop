@@ -1,19 +1,31 @@
 <view class="container">
-    <view class="brand-info">
+    <view class="brand-info module">
         <view class="name">
-            <image class="img" src="{{brand.app_list_pic_url}}" background-size="cover"></image>
-            <view class="info-box">
-                <view class="info">
-                    <text class="txt">{{brand.name}}</text>
-                    <text class="line"></text>
-                </view>
-            </view>
+            <image class="img" mode="aspectFill" src="{{brand.pic_img}}"></image>
+            
         </view>
-        <view class="desc">
-            {{brand.simple_desc}}
+        <view class="info-box">
+          <view class="info">
+            <text class="txt cmn-two-line">{{brand.pic_title}}</text>
+            <button class="share-btn iconfont icon-fenxiang" open-type="share" id="1">分享</button>
+          </view>
+          <view class="price-box cmn-clearfix">
+            <text class="price"><text class="price_unit">￥</text>{{brand.price}}</text>
+            <text class="sell_num">已售356件</text>
+          </view>
+          <view class="carriage-box">
+            <text>运费 0</text>
+          </view>
         </view>
+        
     </view>
-
+    <view class="module standard-info iconfont icon-youjiantou" bindtap="standardShow">
+      <text class="txt">规格/数量</text>
+    </view>
+    
+    <view class="desc module">
+      {{brand.simple_desc}}
+    </view>
     <view class="cate-item">
         <view class="b">
             <block wx:for="{{goodsList}}" wx:for-index="iindex" wx:for-item="iitem">
@@ -25,4 +37,30 @@
             </block>
         </view>
     </view>
+</view>
+<view class="standard-pop" hidden="{{standardHide}}">
+  <view class="pop-main">
+    <view class="iconfont icon-close" bindtap="standardHide"></view>
+    <view class="pop-detail">
+      <view>
+        <image class="img" mode="aspectFill" src="{{brand.pic_img}}"></image>
+        <view class="text-box">
+          <view>
+            <text class="price"><text class="price_unit">￥</text>{{brand.price}}</text>
+          </view>
+          
+          <view><text class="inventory_num">库存897件</text></view>
+        </view>
+      </view>
+      <view class="buy_num_box">
+        <text>购买数量</text>
+        <view class="change_num cmn-clearfix">
+          <text class="cell">-</text>
+          <input class="cell" value="1"></input>
+          <text class="cell">+</text>
+        </view>
+      </view>
+    </view>
+    
+  </view>
 </view>

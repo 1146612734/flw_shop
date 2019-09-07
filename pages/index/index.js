@@ -6,14 +6,53 @@ const user = require('../../services/user.js');
 const app = getApp()
 Page({
   data: {
-    goodsCount: 0,
-    newGoods: [],
-    hotGoods: [],
-    topics: [],
-    brands: [],
-    floorGoods: [],
-    banner: [],
-    channel: []
+    imgUrls: [
+      'https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640',
+      'https://images.unsplash.com/photo-1551214012-84f95e060dee?w=640',
+      'https://images.unsplash.com/photo-1551446591-142875a901a1?w=640'
+    ],
+    indicatorDots: true,
+    autoplay: true,
+    interval: 3000,
+    duration: 1000,
+    lists: [
+      {
+        pic_img: 'https://cdn.huaduocai.net/Storage/Shop/3/Products/7038/39954843750740.jpg',
+        pic_title: '心中只有你',
+        comment_num: 378,
+        goodcomment_num: '100%',
+        price: 218,
+        sales_volume: 536,
+        id: "1"
+      },
+      {
+        pic_img: 'http://img.21xianhua.com/upload/2019/01/02/24b4c6868b8134b80500597f9cc3cac9@360',
+        pic_title: '笑语嫣然',
+        comment_num: 378,
+        goodcomment_num: '100%',
+        price: 139,
+        sales_volume: 536,
+        id: "2"
+      },
+      {
+        pic_img: 'http://img.21xianhua.com/upload/2018/12/14/2a70d15c210a832b27f99a08f2869e42@360',
+        pic_title: '温暖心情',
+        comment_num: 378,
+        goodcomment_num: '100%',
+        price: 158,
+        sales_volume: 536,
+        id: "3"
+      },
+      {
+        pic_img: '//img.21xianhua.com/upload/2017/11/04/436d1c743e2421e0cb5f79fb83985786@360',
+        pic_title: '呵护你',
+        comment_num: 378,
+        goodcomment_num: '100%',
+        price: 108,
+        sales_volume: 536,
+        id: "4"
+      }
+    ]
   },
   onShareAppMessage: function () {
     return {
