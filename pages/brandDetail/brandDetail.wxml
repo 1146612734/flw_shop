@@ -22,7 +22,10 @@
     <view class="module standard-info iconfont icon-youjiantou" bindtap="standardShow">
       <text class="txt">规格/数量</text>
     </view>
-    
+    <view class="brand_detail">
+      <text class="title">商品详情</text>
+      <rich-text nodes="{{brand.detailNodes}}"></rich-text>
+    </view>
     <view class="desc module">
       {{brand.simple_desc}}
     </view>
@@ -38,6 +41,33 @@
         </view>
     </view>
 </view>
+<view class="btn_box_bottom_placeholder"></view>
+<view class="btn_box_bottom cmn-clearfix">
+  <view class="btn_l part cmn-clearfix">
+    <view class="btn_list">
+      <navigator url="../../pages/index/index" open-type="switchTab" hover-class="navigator-hover">
+      <view class="iconfont icon-home"></view>
+      <view class="txt">首页</view>
+      </navigator>
+    </view>
+    <view class="btn_list">
+      <view class="iconfont icon-customer"></view>
+      <view class="txt">客服</view>
+    </view>
+    <view class="btn_list">
+      <navigator url="../../pages/cart/cart" open-type="switchTab" hover-class="navigator-hover">
+        <view class="iconfont icon-gouwuche"></view>
+        <view class="txt">购物车</view>
+      </navigator>
+    </view>
+  </view>
+  <view class="btn_r part">
+    <view class="btn_box cmn-clearfix">
+      <text class="btn add_cart" bindtap="addCart">加入购物车</text>
+      <text class="btn buy_now" bindtap="buyNow">立即购买</text>
+    </view> 
+  </view>
+</view>
 <view class="standard-pop" hidden="{{standardHide}}">
   <view class="pop-main">
     <view class="iconfont icon-close" bindtap="standardHide"></view>
@@ -49,18 +79,21 @@
             <text class="price"><text class="price_unit">￥</text>{{brand.price}}</text>
           </view>
           
-          <view><text class="inventory_num">库存897件</text></view>
+          <view><text class="inventory_num">库存{{brand.stock_num}}件</text></view>
         </view>
       </view>
       <view class="buy_num_box">
         <text>购买数量</text>
         <view class="change_num cmn-clearfix">
-          <text class="cell">-</text>
-          <input class="cell" value="1"></input>
-          <text class="cell">+</text>
+          <text class="cell {{cutdownDisable}}" bindtap="cutDown">-</text>
+          <input class="cell" disabled type="number" value="{{purchase_num}}" bindinput="changeNum"></input>
+          <text class="cell {{increaseDisable}}" bindtap="increaseNum">+</text>
         </view>
-      </view>
+      </view>  
     </view>
-    
+    <view class="btn_box cmn-clearfix">
+      <text class="btn add_cart" bindtap="addCart">加入购物车</text>
+      <text class="btn buy_now" bindtap="buyNow">立即购买</text>
+    </view> 
   </view>
 </view>

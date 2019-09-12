@@ -5,7 +5,16 @@ var app = getApp();
 
 Page({
   data: {
-    cartGoods: [],
+    cartGoods: [
+      {
+        id: 1,
+        list_pic_url: "//img.21xianhua.com/upload/2017/11/04/436d1c743e2421e0cb5f79fb83985786@360",
+        goods_name: "笑语嫣然 缘定三生 33枝红玫瑰，搭配满天星 鲜花店送花订花 花束 礼盒",
+        goods_brief: "",
+        goods_price: 198,
+        purchase_num: 1
+      }
+    ],
     cartTotal: {
       "goodsCount": 0,
       "goodsAmount": 0.00,

@@ -54,12 +54,6 @@
         "text": "首页"
       },
       {
-        "pagePath": "pages/topic/topic",
-        "iconPath": "static/images/ic_menu_sort_nor.png",
-        "selectedIconPath": "static/images/ic_menu_topic_pressed.png",
-        "text": "发现"
-      },
-      {
         "pagePath": "pages/cart/cart",
         "iconPath": "static/images/ic_menu_shoping_nor.png",
         "selectedIconPath": "static/images/ic_menu_shoping_pressed.png",

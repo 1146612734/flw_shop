@@ -6,7 +6,16 @@ var app = getApp();
 Page({
   data: {
     typeId: 0,
-    collectList: []
+    collectList: [
+      {
+        id: 1,
+        list_pic_url: "//img.21xianhua.com/upload/2017/11/04/436d1c743e2421e0cb5f79fb83985786@360",
+        name: "笑语嫣然",
+        goods_brief: "缘定三生 33枝红玫瑰，搭配满天星 鲜花店送花订花 花束 礼盒",
+        goods_price: 198,
+
+      }
+    ]
   },
   getCollectList() {
     let that = this;

@@ -15,21 +15,24 @@
       <view class="group-item">
         <view class="goods">
           <view class="item {{isEditCart ? 'edit' : ''}}" wx:for="{{cartGoods}}" wx:key="{{item.id}}">
-            <view class="checkbox {{item.checked ? 'checked' : ''}}" bindtap="checkedItem" data-item-index="{{index}}"></view>
-            <view class="cart-goods">
+            <view class="iconfont checkbox {{item.checked ? 'icon-xuanzhong' : 'icon-weixuanzhong'}}" bindtap="checkedItem" data-item-index="{{index}}"></view>
+            <view class="img_box">
               <image class="img" src="{{item.list_pic_url}}"></image>
+            </view>
+            
+            <view class="cart-goods">
+              
               <view class="info">
-                <view class="t">
+                <view class="t cmn-two-line">
                   <text class="name">{{item.goods_name}}</text>
-                  <text class="num">x{{item.number}}</text>
                 </view>
-                <view class="attr">{{ isEditCart ? '已选择:' : ''}}{{item.goods_specifition_name_value}}</view>
-                <view class="b">
-                  <text class="price">￥{{item.retail_price}}</text>
-                  <view class="selnum">
-                    <view class="cut" bindtap="cutNumber" data-item-index="{{index}}">-</view>
-                    <input value="{{item.number}}" class="number" disabled="true" type="number" />
-                    <view class="add" bindtap="addNumber" data-item-index="{{index}}">+</view>
+                
+                <view class="b cmn-clearfix">
+                  <text class="price">￥{{item.goods_price}}</text>
+                  <view class="change_num cmn-clearfix">
+                    <text class="cell" bindtap="cutDown">-</text>
+                    <input class="cell" disabled type="number" value="{{item.purchase_num}}" bindinput="changeNum"></input>
+                    <text class="cell" bindtap="increaseNum">+</text>
                   </view>
                 </view>
               </view>
@@ -69,7 +72,7 @@
             </view>-->
     </view>
     <view class="cart-bottom">
-      <view class="checkbox {{checkedAllStatus ? 'checked' : ''}}" bindtap="checkedAll">全选({{cartTotal.checkedGoodsCount}})</view>
+      <view class="checkbox iconfont {{checkedAllStatus ? 'icon-xuanzhong' : 'icon-weixuanzhong'}}" bindtap="checkedAll">全选({{cartTotal.checkedGoodsCount}})</view>
       <view class="total">{{!isEditCart ? '￥'+cartTotal.checkedGoodsAmount : ''}}</view>
       <view class="delete" bindtap="editCart">{{!isEditCart ? '编辑' : '完成'}}</view>
       <view class="checkout" bindtap="deleteCart" wx:if="{{isEditCart}}">删除所选</view>

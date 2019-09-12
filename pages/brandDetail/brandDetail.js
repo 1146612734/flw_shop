@@ -8,11 +8,17 @@ Page({
   data: {
     id: 0,
     brand: {
-      pic_img: 'https://img.zuoyebang.cc/zyb_72b69ab796f577462ea32b300c2b0666.jpg',
-      pic_title: '笑语嫣然',
-      price: 139
+      pic_img: '//img.21xianhua.com/upload/2017/11/04/436d1c743e2421e0cb5f79fb83985786@360',
+      pic_title: '笑语嫣然 缘定三生 33枝红玫瑰，搭配满天星 鲜花店送花订花 花束 礼盒',
+      price: 139,
+      detailNodes: '<img src="https://cdn.huaduocai.net//Storage/Shop/1/Products/1221/373976388972175750.jpg">'
     },
     standardHide: true,
+    purchase_num: 1,
+    stock_num: 998,
+    increaseDisable: "",
+    cutdownDisable: "disabled",
+
     goodsList: [],
     page: 1,
     size: 1000
@@ -24,6 +30,18 @@ Page({
       id: parseInt(options.id)
     });
     this.getBrand();
+    var detailNodes = "brand.detailNodes";
+    let html = this.data.brand.detailNodes
+      .replace(/<p([\s\w"=\/\.:;]+)((?:(style="[^"]+")))/ig, '<p')
+      .replace(/<p>/ig, '<p style="font-size: 15Px; line-height: 25Px;">')
+      .replace(/<img([\s\w"-=\/\.:;]+)((?:(height="[^"]+")))/ig, '<img$1')
+      .replace(/<img([\s\w"-=\/\.:;]+)((?:(width="[^"]+")))/ig, '<img$1')
+      .replace(/<img([\s\w"-=\/\.:;]+)((?:(style="[^"]+")))/ig, '<img$1')
+      .replace(/<img([\s\w"-=\/\.:;]+)((?:(alt="[^"]+")))/ig, '<img$1')
+      .replace(/<img([\s\w"-=\/\.:;]+)/ig, '<img$1 style="max-width: 100%; border-radius: 8Px;    "');
+    this.setData({
+      [detailNodes]: html
+    })
   },
   getBrand: function () {
     let that = this;
@@ -67,6 +85,59 @@ Page({
     this.setData({
       standardHide: true
     });
+  },
+  increaseNum: function () {
+    this.data.purchase_num ++;
+    if (this.data.purchase_num >= this.data.stock_num) {
+      this.setData({
+        purchase_num: this.data.stock_num,
+        increaseDisable: "disabled"
+      });
+    } else {
+      this.setData({
+        purchase_num: this.data.purchase_num
+      });
+    }
+    if (this.data.purchase_num > 1) {
+      this.setData({
+        cutdownDisable: ""
+      });
+    } 
+  },
+  cutDown: function () {
+    this.data.purchase_num--;
+    if (this.data.purchase_num <= 1) {
+      this.setData({
+        purchase_num: 1,
+        cutdownDisable: "disabled"
+      });
+    } else {
+      this.setData({
+        purchase_num: this.data.purchase_num
+      });
+    }
+    if (this.data.purchase_num < this.data.stock_num) {
+      this.setData({
+        increaseDisable: ""
+      });
+    } 
+  },
+  changeNum: function (event) {
+    console.log(isNaN(event.detail.value));
+  },
+  addCart: function () {
+    wx.showToast({
+      title: '待开发',
+      icon: 'success',
+      duration: 1000
+    })
+  },
+  buyNow: function () {
+    wx.showToast({
+      title: '待开发',
+      icon: 'success',
+      duration: 1000
+    })
   },
   onReady: function () {
     // 页面渲染完成

@@ -1,3 +1,6 @@
+.slide-image {
+  width: 100%;
+}
 .main_list .main_list_con{
   float: left;
   width: 362rpx;
