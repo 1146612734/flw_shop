@@ -10,7 +10,80 @@ Page({
     },
     categoryFilter: false,
     filterCategory: [],
-    goodsList: [],
+    goodsList: [
+      {
+        pic_img: 'https://cdn.huaduocai.net/Storage/Shop/3/Products/7038/39954843750740.jpg',
+        good_name: '心中只有你 热烈爱的宣言，铭记于心的约定 爱这花儿般优雅的你',
+        comment_num: 378,
+        goodcomment_num: '100%',
+        price: 218,
+        sales_volume: 536,
+        id: "1"
+      },
+      {
+        pic_img: 'http://img.21xianhua.com/upload/2019/01/02/24b4c6868b8134b80500597f9cc3cac9@360',
+        good_name: '笑语嫣然',
+        comment_num: 378,
+        goodcomment_num: '100%',
+        price: 139,
+        sales_volume: 536,
+        id: "2"
+      },
+      {
+        pic_img: 'http://img.21xianhua.com/upload/2018/12/14/2a70d15c210a832b27f99a08f2869e42@360',
+        good_name: '温暖心情',
+        comment_num: 378,
+        goodcomment_num: '100%',
+        price: 158,
+        sales_volume: 536,
+        id: "3"
+      },
+      {
+        pic_img: '//img.21xianhua.com/upload/2017/11/04/436d1c743e2421e0cb5f79fb83985786@360',
+        good_name: '呵护你',
+        comment_num: 378,
+        goodcomment_num: '100%',
+        price: 108,
+        sales_volume: 536,
+        id: "4"
+      },
+      {
+        pic_img: 'https://cdn.huaduocai.net/Storage/Shop/3/Products/7038/39954843750740.jpg',
+        good_name: '心中只有你 热烈爱的宣言，铭记于心的约定 爱这花儿般优雅的你',
+        comment_num: 378,
+        goodcomment_num: '100%',
+        price: 218,
+        sales_volume: 536,
+        id: "1"
+      },
+      {
+        pic_img: 'http://img.21xianhua.com/upload/2019/01/02/24b4c6868b8134b80500597f9cc3cac9@360',
+        good_name: '笑语嫣然',
+        comment_num: 378,
+        goodcomment_num: '100%',
+        price: 139,
+        sales_volume: 536,
+        id: "2"
+      },
+      {
+        pic_img: 'http://img.21xianhua.com/upload/2018/12/14/2a70d15c210a832b27f99a08f2869e42@360',
+        good_name: '温暖心情',
+        comment_num: 378,
+        goodcomment_num: '100%',
+        price: 158,
+        sales_volume: 536,
+        id: "3"
+      },
+      {
+        pic_img: '//img.21xianhua.com/upload/2017/11/04/436d1c743e2421e0cb5f79fb83985786@360',
+        good_name: '呵护你',
+        comment_num: 378,
+        goodcomment_num: '100%',
+        price: 108,
+        sales_volume: 536,
+        id: "4"
+      }
+    ],
     categoryId: 0,
     currentSortType: 'default',
     currentSortOrder: 'desc',

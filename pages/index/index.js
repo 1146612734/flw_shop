@@ -78,6 +78,11 @@ Page({
       }
     });
   },
+  goCommodityList: function (event) {
+    wx.navigateTo({
+      url: '../../pages/hotGoods/hotGoods'
+    })
+  },
   onLoad: function (options) {
     this.getIndexData();
     util.request(api.GoodsCount).then(res => {

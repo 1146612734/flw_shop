@@ -1,0 +1,8 @@
+<view class="container">
+  <view>收入详情</view>
+  <view class="income_ul">
+    <view class="income_li">
+      
+    </view>
+  </view>
+</view>

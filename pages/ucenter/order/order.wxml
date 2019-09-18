@@ -1,26 +1,62 @@
 <view class="container">
-    <view class="orders">
-        <navigator url="../orderDetail/orderDetail?id={{item.id}}" class="order" wx:for="{{orderList}}" wx:key="{{item.id}}">
-            <view class="h">
-                <view class="l">订单编号：{{item.order_sn}}</view>
-                <view class="r">{{item.order_status_text}}</view>
-            </view>
-            <view class="goods" wx:for="{{item.goodsList}}" wx:key="{{gitem.id}}" wx:for-item="gitem">
-                <view class="img">
-                    <image src="{{gitem.list_pic_url}}"></image>
-                </view>
-                <view class="info">
-                    <text class="name">{{gitem.goods_name}}</text>
-                    <text class="number">共{{gitem.number}}件商品</text>
-                </view>
-                <view class="status"></view>
-            </view>
-            <view class="b">
-                <view class="l">实付：￥{{item.actual_price}}</view>
-                <view class="r">
-                    <button class="btn" data-order-index="{{index}}" catchtap="payOrder" wx:if="{{item.handleOption.pay}}">去付款</button>
-                </view>
-            </view>
-        </navigator>
+  <view class="tag_ul cmn-flex">
+    <view class="tal_li {{currentTagid == 0 ? 'act' : ''}}" bindtap="changeTag" data-tagid="0">全部</view>
+    <view class="tal_li {{currentTagid == 1 ? 'act' : ''}}" bindtap="changeTag" data-tagid="1">待付款</view>
+    <view class="tal_li {{currentTagid == 2 ? 'act' : ''}}" bindtap="changeTag" data-tagid="2">待收货</view>
+    <view class="tal_li {{currentTagid == 3 ? 'act' : ''}}" bindtap="changeTag" data-tagid="3">待评论</view>
+  </view>
+  <view class="order_ul">
+    <view class="order_li">
+      <view class="order_li_t">
+        <view class="image_box">
+          <image class="img" src="//img.21xianhua.com/upload/2017/11/04/436d1c743e2421e0cb5f79fb83985786@360"role="img"></image>
+        </view>
+        <view class="text_r">
+          <view class="purchase_price">
+            <view class="price"><text class="price_unit">￥</text>298</view>
+            <view class="purchase_num">x1</view>
+          </view>
+          
+          <view class="good_name cmn-two-line">
+          天真、纯洁、尊敬 、我足以与你相配白玫瑰（小型花） 淡薄，年轻</view>
+        </view>
+      </view>
+      <view class="order_li_b cmn-clearfix">
+        <view class="purchase_detail">
+          <text>共1件商品 </text>
+          <text> 合计:<text class="price_unit">￥</text><text class="num">298</text></text>
+        </view>
+        <view class="btn_box">
+          <view class="delete_btn cmn_btn">删除订单</view>
+          <view class="purchase_btn cmn_btn">再次购买</view>
+        </view>
+      </view>
     </view>
+    <view class="order_li">
+      <view class="order_li_t">
+        <view class="image_box">
+          <image class="img" src="//img.21xianhua.com/upload/2017/11/04/436d1c743e2421e0cb5f79fb83985786@360"role="img"></image>
+        </view>
+        <view class="text_r">
+          <view class="purchase_price">
+            <view class="price"><text class="price_unit">￥</text>298</view>
+            <view class="purchase_num">x1</view>
+          </view>
+          
+          <view class="good_name cmn-two-line">
+          天真、纯洁、尊敬 、我足以与你相配白玫瑰（小型花） 淡薄，年轻</view>
+        </view>
+      </view>
+      <view class="order_li_b cmn-clearfix">
+        <view class="purchase_detail">
+          <text>共1件商品 </text>
+          <text> 合计:<text class="price_unit">￥</text><text class="num">298</text></text>
+        </view>
+        <view class="btn_box">
+          <view class="delete_btn cmn_btn">删除订单</view>
+          <view class="purchase_btn cmn_btn">再次购买</view>
+        </view>
+      </view>
+    </view>
+  </view>
 </view>

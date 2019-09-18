@@ -1,6 +1,52 @@
 .slide-image {
   width: 100%;
 }
+
+.commodity_box {
+  display: -webkit-box; /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+  display: -moz-box; /* 老版本语法: Firefox (buggy) */
+  display: -ms-flexbox; /* 混合版本语法: IE 10 */
+  display: -webkit-flex; /* 新版本语法: Chrome 21+ */
+  display: flex; /* 新版本语法: Opera 12.1, Firefox 22+ */
+  padding: 20rpx 0 10rpx;
+  background: #fff;
+  margin-bottom: 10rpx;
+}
+.cdy_li {
+  flex: auto;
+  text-align: center;
+}
+.cdy_con {
+  width: 100rpx;
+  display: inline-block;
+
+}
+.cdy_con_t {
+  width: 100rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-radius: 50%;
+  background: #FF86B2;
+  text-align: center;
+  font-size: 32rpx;
+  color: #fff;
+}
+.cdy_li_2 .cdy_con_t {
+  background: #FFB03D;
+}
+.cdy_li_3 .cdy_con_t {
+  background: #2AFF8E;
+}
+.cdy_li_4 .cdy_con_t {
+  background: #70D3FF;
+}
+.cdy_con_b {
+  font-size: 24rpx;
+  color: #666;
+  text-align: center;
+  line-height: 2;
+}
+
 .main_list .main_list_con{
   float: left;
   width: 362rpx;

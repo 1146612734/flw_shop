@@ -8,6 +8,32 @@
       </swiper-item>
     </block>
   </swiper>
+  <view class=" commodity_box">
+    <view class="cdy_li cdy_li_1">
+      <view class="cdy_con" bindtap="goCommodityList">
+        <view class="cdy_con_t">美妆</view>
+        <view class="cdy_con_b">美容护肤</view>
+      </view> 
+    </view>
+    <view class="cdy_li cdy_li_2">
+      <view class="cdy_con" bindtap="goCommodityList">
+        <view class="cdy_con_t">美食</view>
+        <view class="cdy_con_b">时令美食</view>
+      </view> 
+    </view>
+    <view class="cdy_li cdy_li_3">
+      <view class="cdy_con" bindtap="goCommodityList">
+        <view class="cdy_con_t">居家</view>
+        <view class="cdy_con_b">居家好物</view>
+      </view> 
+    </view>
+    <view class="cdy_li cdy_li_4">
+      <view class="cdy_con" bindtap="goCommodityList">
+        <view class="cdy_con_t">穿搭</view>
+        <view class="cdy_con_b">潮人穿搭</view>
+      </view> 
+    </view>
+  </view>
   <view class="main_list cmn-clearfix">
     <block wx:for="{{lists}}" wx:for-item="item">
       <navigator url="/pages/brandDetail/brandDetail?id={{item.id}}">

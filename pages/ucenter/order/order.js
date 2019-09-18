@@ -3,7 +3,14 @@ var api = require('../../../config/api.js');
 
 Page({
   data:{
-    orderList: []
+    currentTagid: 0,
+  },
+  changeTag:function(event) {
+    var data = event.currentTarget.dataset;
+    this.setData({
+      currentTagid: data.tagid
+    })
+    console.log(data)
   },
   onLoad:function(options){
     // 页面初始化 options为页面跳转所带来的参数
