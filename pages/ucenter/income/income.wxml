@@ -1,8 +1,20 @@
 <view class="container">
-  <view>收入详情</view>
+  <view class="page_title">收入详情</view>
   <view class="income_ul">
-    <view class="income_li">
-      
+    <view class="income_li cmn-flex" bindtap="goPaymentDetail">
+      <!-- <image class="li_l"></image> -->
+      <view class="li_c cmn-two-line">白鲨通过你的分享购买了【教师节送师长，超级优惠花束】，你获得赏金15.8</view>
+      <view class="li_r cmn-flex font_red"><text class="price_unit">+</text>15.8</view>
+    </view>
+    <view class="income_li cmn-flex" bindtap="goPaymentDetail">
+      <!-- <image class="li_l"></image> -->
+      <view class="li_c cmn-two-line">提现到微信</view>
+      <view class="li_r cmn-flex font_green"><text class="price_unit font_green">-</text>15.8</view>
+    </view>
+    <view class="income_li cmn-flex" bindtap="goPaymentDetail">
+      <!-- <image class="li_l"></image> -->
+      <view class="li_c cmn-two-line">小美通过你的分享购买了【教师节送师长，超级优惠花束】，你获得赏金11.6</view>
+      <view class="li_r cmn-flex font_red"><text class="price_unit">+</text>11.6</view>
     </view>
   </view>
 </view>

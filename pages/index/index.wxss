@@ -35,7 +35,7 @@
   background: #FFB03D;
 }
 .cdy_li_3 .cdy_con_t {
-  background: #2AFF8E;
+  background: rgb(99, 224, 82);
 }
 .cdy_li_4 .cdy_con_t {
   background: #70D3FF;

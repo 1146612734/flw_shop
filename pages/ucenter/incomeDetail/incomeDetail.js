@@ -17,12 +17,16 @@ Page({
       }
     ]
   },
-  goPaymentDetail(event) {
-    var data = event.currentTarget.dataset;
-    wx.navigateTo({
-      url: '../../../pages/ucenter/incomeDetail/incomeDetail?id='+data.id
-    })
-    
+  getCollectList() {
+    let that = this;
+    util.request(api.CollectList, { typeId: that.data.typeId}).then(function (res) {
+      if (res.errno === 0) {
+        console.log(res.data);
+        that.setData({
+          collectList: res.data.data
+        });
+      }
+    });
   },
   onLoad: function (options) {
     this.getCollectList();

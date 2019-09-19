@@ -1,0 +1,48 @@
+page{
+    background: #fff;
+    min-height: 100%;
+}
+.page_title {
+  padding: 40rpx 20rpx;
+  font-size: 40rpx;
+  text-align: center;
+}
+.page_title .icon-qianbao {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 60rpx;
+  position: relative;
+  padding-left: 70rpx;
+}
+.page_title .icon-qianbao::before {
+  color: orange;
+  font-size: 60rpx;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.money {
+  text-align: center;
+  color: red;
+  font-size: 50rpx;
+}
+.con_t {
+  padding: 20rpx 40rpx;
+  border-bottom: 1rpx solid #eee;
+}
+.con_m {
+  padding: 20rpx 40rpx;
+}
+.list {
+  position: relative;
+  padding: 20rpx 0;
+}
+.list_l {
+  position: absolute;
+  left: 0;
+  top: 20rpx;
+  display: block;
+}
+.list_r {
+  padding-left: 200rpx;
+}

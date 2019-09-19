@@ -1,0 +1,32 @@
+<view class="container">
+  <view class="page_title"><text class="iconfont icon-qianbao">我的零钱</text></view>
+  <view class="money"><text class="price_unit">￥</text>32.85</view>
+  <view class="con_t">订单详情</view>
+  <view class="con_m">
+    <view class="list">
+      <view class="list_l">类型</view>
+      <view class="list_r">收入</view>
+    </view>
+    <view class="list">
+      <view class="list_l">付款方</view>
+      <view class="list_r">白鲨</view>
+    </view>
+    <view class="list">
+      <view class="list_l">时间</view>
+      <view class="list_r">2019年9月16日 14:00</view>
+    </view>
+    
+    <view class="list">
+      <view class="list_l">交易单号</view>
+      <view class="list_r">20190910145324102582</view>
+    </view>
+    <view class="list">
+      <view class="list_l">收款方</view>
+      <view class="list_r">白鲨</view>
+    </view>
+    <view class="list">
+      <view class="list_l">备注</view>
+      <view class="list_r">白鲨通过你的分享购买了【教师节送师长，超级优惠花束】，你获得赏金15.8</view>
+    </view>
+  </view>
+</view>

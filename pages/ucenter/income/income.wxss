@@ -2,3 +2,30 @@ page{
     background: #fff;
     min-height: 100%;
 }
+.page_title {
+  padding: 40rpx 20rpx;
+  font-size: 36rpx;
+}
+.income_ul {
+  padding: 0 20rpx;
+}
+.income_li {
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #eee;
+}
+.li_c {
+  flex: 1;
+}
+.li_r {
+  width: 110rpx;
+  text-align: right;
+  align-items:center;
+  justify-content:center;
+  
+}
+.font_red {
+  color:red;
+}
+.font_green {
+  color: #00CC66;
+}
